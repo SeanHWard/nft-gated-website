@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/Link';
+import { useAddress, useLogin, Web3Button, ConnectWallet } from "@thirdweb-dev/react";
 
 export default function Navbar() {
   return (
