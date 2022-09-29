@@ -6,22 +6,15 @@ import checkBalance from "../util/checkBalance";
 import styles from "../styles/Home.module.css";
 
 
-export default function Home() {
-  const logout = useLogout();
+export default function Gated() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.h1}>Restricted Access Page</h1>
-      <p className={styles.explain}>
-        Thanks for being a member of our NFT community!
-      </p>
-
-      <button className={styles.mainButton} onClick={logout}>
-        Logout
-      </button>
+      <h1 className={styles.h1}>This is more gated content</h1>
     </div>
   );
 }
+
 
 // This gets called on every request
 export async function getServerSideProps(context) {
