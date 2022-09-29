@@ -1,4 +1,4 @@
-import { useAddress, useLogin, Web3Button } from "@thirdweb-dev/react";
+import { useAddress, useLogin, Web3Button, ConnectWallet } from "@thirdweb-dev/react";
 import styles from "../styles/Home.module.css";
 
 // replace this with your contract address
@@ -34,13 +34,14 @@ export default function Login() {
           For demo purposes, you can claim an NFT from our collection below:
         </p>
 
-        <Web3Button
+        <ConnectWallet></ConnectWallet>
+        {/* <Web3Button
           contractAddress={contractAddress}
           action={(contract) => contract.erc1155.claim(0, 1)}
           accentColor="#F213A4"
         >
           Claim NFT
-        </Web3Button>
+        </Web3Button> */}
       </>
     </div>
   );
